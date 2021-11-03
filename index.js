@@ -22,4 +22,4 @@ app.get("/detalhes", (req, res) => {
 })
 
 
-app.listen ( port, () => console.log(`Servidor rodando em localhost: ${port}`));
+app.listen ( port, () => console.log(`Servidor rodando em localhost:${port}`));

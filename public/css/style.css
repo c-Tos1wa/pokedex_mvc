@@ -7,21 +7,37 @@
 }
 
 .header{
+  background-color: #ff7d00;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: center;  
 }
 
 .navbar{
+  background-color: #001524;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 1.5em;
-  margin: 4.8px 4px;
+  margin-bottom: 4px;
 }
 
 .navbar a{
-  color: #000;
+  color: #ffba08;
   font-size: 2em;
 }
+.container{
+  font-size: 1.5em;
+}
+
+.inputs{
+  gap: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 1.5em;
+  
+}
+
 
