@@ -15,7 +15,7 @@ app.get("/", (req, res) => {
       name: "Ponyta",
       type: "fire",
       image: "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/077.png",
-      description: "It can't run properly when it's neewly born.",
+      description: "It can't run properly when it's newly born.",
       height: 1,
       weight: 30,
       category: "Fire Horse",
@@ -46,11 +46,14 @@ app.get("/", (req, res) => {
     }
 
   ];
+  
   res.render("index", 
     {
-      pokemon
+      pokemons: pokemon
     }
-  );
+
+    );
+    
 }); 
 
 

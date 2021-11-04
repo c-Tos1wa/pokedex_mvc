@@ -22,12 +22,17 @@
       </nav>
     </section>
     <section class="section">
-      <ul>
-        <% pokemon.map ( i => {
-          %> <li><%= i %></li> <%
+      <div class="card">
+        <% pokemons.map ( i => {
+          %><div>
+              <li class="card-item"><%= i.name %></li>  <%
+            %> <img class="card-item" src=<%= i.image %> /> <%
+            %> <li class="card-item"><%= i.type %></li>
+          </div> <%
         }) %>
-      </ul>
+      </div>
     </section>
+
 
   </main>
   
