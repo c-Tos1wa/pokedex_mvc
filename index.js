@@ -9,7 +9,48 @@ app.use(express.static(path.join(__dirname,"public")));
 
 
 app.get("/", (req, res) => {
-  res.render("index");
+  const pokemon = [
+    {
+      number: 77,
+      name: "Ponyta",
+      type: "fire",
+      image: "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/077.png",
+      description: "It can't run properly when it's neewly born.",
+      height: 1,
+      weight: 30,
+      category: "Fire Horse",
+      abilities: "run away, flash fire"
+    },
+
+    {
+      number: 58,
+      name: "Growlithe",
+      type: "fire",
+      image: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/058.png",
+      description: "It has a brave and trustworthy nature.",
+      height: 0.7,
+      weight: 19,
+      category: "puppy",
+      abilities: "intimidate, flash fire"
+    },
+    {
+      number: 148,
+      name: "Dragonair",
+      type: "dragon",
+      image: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/148.png",
+      description: "It can control the weather.",
+      height: 4,
+      weight: 16.5,
+      category: "dragon",
+      ability: "shed skin"
+    }
+
+  ];
+  res.render("index", 
+    {
+      pokemon
+    }
+  );
 }); 
 
 
@@ -22,4 +63,5 @@ app.get("/detalhes", (req, res) => {
 })
 
 
-app.listen ( port, () => console.log(`Servidor rodando em localhost:${port}`));
+app.listen ( port, () => 
+  console.log(`Servidor rodando em localhost:${port}`));

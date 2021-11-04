@@ -21,7 +21,13 @@
         <a href="#">Cadastro</a>
       </nav>
     </section>
-    <section class="section"></section>
+    <section class="section">
+      <ul>
+        <% pokemon.map ( i => {
+          %> <li><%= i %></li> <%
+        }) %>
+      </ul>
+    </section>
 
   </main>
   
