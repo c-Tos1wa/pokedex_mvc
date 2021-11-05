@@ -70,7 +70,7 @@ h2{
   justify-content: center;
   align-items: center; 
   gap: 10px;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
 .inputs{
@@ -78,12 +78,23 @@ h2{
   padding: 10px;
   display: block;
   width: 50%;
+  border-radius: 5px;
 } 
 
 #submitButton {
   font-size: 1.5em;
   padding: 5px;
-  
+  border-color: #870064;
+  background-color: #fff;
+  color: #870064;
+  border-radius: 5px; 
+}
+
+#submitButton:hover{
+  background-color: #870064;
+  color: #fff;
+  box-shadow: 20px 20px 10px #6e6961;
+
 }
 
 .footer{

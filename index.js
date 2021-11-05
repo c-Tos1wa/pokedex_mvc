@@ -40,7 +40,7 @@ app.get("/cadastro", (req, res) => {
       name: "img"
     },
     {
-      placeholder: "Faça__uma__descrição",
+      placeholder: "Faça&uma&descrição",
       name: "description"
     },
     {
