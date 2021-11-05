@@ -4,12 +4,15 @@
   <form action="/sent" method="POST">
     
     <div class="container">
-        <% attributes.forEach( item => { %>
-          
-            <input class="inputs" placeholder=<%= item.placeholder %> 
-            name=<%= item.name %> required /> <% 
-          }) %>
-      
+        <input class="inputs" placeholder="Digite o número" name="number" />
+        <input class="inputs" placeholder="Que nome quer chama-lo?" name="name" />
+        <input class="inputs" placeholder="Qual o tipo?" name="type" />
+        <input class="inputs" placeholder="Coloque aqui o link da imagem" name="image" />
+        <input class="inputs" placeholder="Escreva uma descrição" name="description" />
+        <input class="inputs" placeholder="Qual é a altura?" name="height" />
+        <input class="inputs" placeholder="Qual é o peso?" name="weight" />
+        <input class="inputs" placeholder="Qual a categoria a que pertence?" name="category" />
+        <input class="inputs" placeholder="Qual a habilidade que o pokémon possui?" name="abilities" />
       <button id="submitButton" type="submit">Cadastrar</button>
     </div>
   </form>

@@ -2,7 +2,7 @@ const express = require("express");
 const path = require("path");
 const app = express();
 
-const port = 3000;
+const port = process.env.PORT || 3000;
 
 app.set("view engine", "ejs");
 app.use(express.static(path.join(__dirname,"public")));
@@ -22,47 +22,7 @@ app.get("/", (req, res) => {
 
 
 app.get("/cadastro", (req, res) => {
-  var atr = [
-    {
-      placeholder: "Digite o número",
-      name: "number"
-    },
-    {
-      placeholder: "Que nome quer chama-lo?",
-      name: "name"
-    },
-    {
-      placeholder: "Qual o tipo?",
-      name: "type"
-    },
-    {
-      placeholder: "Coloque aqui o link da imagem",
-      name: "img"
-    },
-    {
-      placeholder: "Faça&uma&descrição",
-      name: "description"
-    },
-    {
-      placeholder: "Sua altura é...",
-      name: "height"
-    },
-    {
-      placeholder: "Seu peso é...",
-      name: "weight"
-    },
-    {
-      placeholder: "Qual a categoria a que pertence?",
-      name: "category"
-    },
-    {
-      placeholder: "Qual a habilidade que o pokémon possui?",
-      name: "abilities"
-    },
-  ]
-  res.render("cadastro", {
-    attributes: atr
-  })
+  res.render("cadastro")
 });
 
 app.post("/sent", (req, res) => {
