@@ -6,60 +6,74 @@ const port = 3000;
 
 app.set("view engine", "ejs");
 app.use(express.static(path.join(__dirname,"public")));
+app.use(express.urlencoded());
 
+let pokemon = []
 
-app.get("/", (req, res) => {
-  const pokemon = [
-    {
-      number: 77,
-      name: "Ponyta",
-      type: "fire",
-      image: "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/077.png",
-      description: "It can't run properly when it's newly born.",
-      height: 1,
-      weight: 30,
-      category: "Fire Horse",
-      abilities: "run away, flash fire"
-    },
-
-    {
-      number: 58,
-      name: "Growlithe",
-      type: "fire",
-      image: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/058.png",
-      description: "It has a brave and trustworthy nature.",
-      height: 0.7,
-      weight: 19,
-      category: "puppy",
-      abilities: "intimidate, flash fire"
-    },
-    {
-      number: 148,
-      name: "Dragonair",
-      type: "dragon",
-      image: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/148.png",
-      description: "It can control the weather.",
-      height: 4,
-      weight: 16.5,
-      category: "dragon",
-      ability: "shed skin"
-    }
-
-  ];
-  
+app.get("/", (req, res) => {  
   res.render("index", 
     {
       pokemons: pokemon
     }
 
-    );
+  );
     
 }); 
 
 
 app.get("/cadastro", (req, res) => {
-  res.render("cadastro")
+  var atr = [
+    {
+      placeholder: "Digite o número",
+      name: "number"
+    },
+    {
+      placeholder: "Que nome quer chama-lo?",
+      name: "name"
+    },
+    {
+      placeholder: "Qual o tipo?",
+      name: "type"
+    },
+    {
+      placeholder: "Coloque aqui o link da imagem",
+      name: "img"
+    },
+    {
+      placeholder: "Faça__uma__descrição",
+      name: "description"
+    },
+    {
+      placeholder: "Sua altura é...",
+      name: "height"
+    },
+    {
+      placeholder: "Seu peso é...",
+      name: "weight"
+    },
+    {
+      placeholder: "Qual a categoria a que pertence?",
+      name: "category"
+    },
+    {
+      placeholder: "Qual a habilidade que o pokémon possui?",
+      name: "abilities"
+    },
+  ]
+  res.render("cadastro", {
+    attributes: atr
+  })
 });
+
+app.post("/sent", (req, res) => {
+  const { name, img, type } = req.body;
+  res.send({
+    name: name,
+    image: img,
+    type: type
+  });
+  //res.redirect("/")
+})
 
 app.get("/detalhes", (req, res) => {
   res.render("detalhes")
