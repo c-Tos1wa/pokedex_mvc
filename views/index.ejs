@@ -2,12 +2,18 @@
 <body>
   <main>
     <%- include('header'); %>
+  
+  <% if(message != ""){ %>
+    <section id="msg">
+      <p><%= message%></p><p id="close">&times;</p>
+    </section>
+  <% } %>
     <section class="section">
       <div class="card">
         <% pokemons.map ( i => {
-          %><div class="eachCard">
-              <p class="card-item"><%= i.name %></p>  <%
-            %> <img class="card-item" src=<%= i.image %> /> <%
+          %><div class="eachCard" onclick="cardOnClick()">
+            <p class="card-item"><%= i.name %></p>  <%
+            %> <img class="card-item" src=<%= i.image %> alt=<%= i.name %> /> <%
             %> <p class="card-item">Type: <%= i.type %></p>
           </div> <%
         }) %>
@@ -15,5 +21,6 @@
     </section>
   </main>
   <%- include('footer'); %>
+  <script src='js/script.js'></script>
 </body>
 </html>

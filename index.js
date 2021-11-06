@@ -8,16 +8,16 @@ app.set("view engine", "ejs");
 app.use(express.static(path.join(__dirname,"public")));
 app.use(express.urlencoded());
 
-let pokemon = []
+let pokemon = [];
+let message = "";
 
 app.get("/", (req, res) => {  
   res.render("index", 
     {
-      pokemons: pokemon
+      pokemons: pokemon,
+      message
     }
-
-  );
-    
+  ); 
 }); 
 
 
@@ -26,17 +26,20 @@ app.get("/cadastro", (req, res) => {
 });
 
 app.post("/sent", (req, res) => {
-  const { name, img, type } = req.body;
-  res.send({
-    name: name,
-    image: img,
-    type: type
-  });
-  //res.redirect("/")
+  const { name, image, type } = req.body;
+  pokemon.push({ name, image, type })
+  message = "Dados enviados com sucesso!"
+  res.redirect("/")
 })
 
-app.get("/detalhes", (req, res) => {
-  res.render("detalhes")
+app.get("/detalhes/:id", (req, res) => {
+  var id = req.params.id;
+  pokemon[id];
+  //const { number, name, image, type, description, height, weight, category, abilities }
+  res.render("detalhes",
+  {
+    pokemons: pokemon
+  })
 })
 
 

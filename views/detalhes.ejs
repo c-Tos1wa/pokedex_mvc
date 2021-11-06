@@ -1,0 +1,20 @@
+
+<body>
+  <main>
+    <%- include('header'); %>
+    <section class="section">
+      <div class="card">
+        <% pokemons.map ( i => {
+          %><div class="cardDetail">
+            <p class="item-detail"><%= i.name %></p>  <%
+            %> <img class="item-detail" src=<%= i.image %> alt=<%= i.name %> /> <%
+            %> <p class="item-detail">Type: <%= i.type %></p>
+          </div> <%
+        }) %>
+      </div>
+    </section>
+  </main>
+  <%- include('footer'); %>
+  <script src='js/script.js'></script>
+</body>
+</html>

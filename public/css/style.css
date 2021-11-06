@@ -36,6 +36,30 @@ h2{
   font-size: 2em;
 }
 
+section#msg{
+  padding: 0.8rem;
+  background-color: #32CD32;
+  color: #000000;
+  position: fixed;
+  left: 3rem;
+  right: 3rem;
+  top: 12rem;
+  text-align: center;
+  font-size: 0.9rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+p#close{
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+p#close:hover{
+  color: #800000;
+  transform: scale(1.5);
+}
+
 .card{
   display: flex;
   justify-content: center;
