@@ -10,8 +10,8 @@
   <% } %>
     <section class="section">
       <div class="card">
-        <% pokemons.map ( i => {
-          %><div class="eachCard" onclick="cardOnClick()">
+        <% pokemons.forEach ( (i, id) => {
+          %><a class="eachCard" href="/detalhes/<%= id %>">
             <p class="card-item"><%= i.name %></p>  <%
             %> <img class="card-item" src=<%= i.image %> alt=<%= i.name %> /> <%
             %> <p class="card-item">Type: <%= i.type %></p>

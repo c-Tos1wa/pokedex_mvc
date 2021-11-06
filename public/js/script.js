@@ -9,7 +9,3 @@ setTimeout(() => {
   message.style.display = "none"
 }, 5000)
 
-
-function cardOnClick(){
-  
-}

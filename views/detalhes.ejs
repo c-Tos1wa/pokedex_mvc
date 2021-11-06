@@ -4,11 +4,16 @@
     <%- include('header'); %>
     <section class="section">
       <div class="card">
-        <% pokemons.map ( i => {
+        <% pokemons.map ( i => { 
           %><div class="cardDetail">
-            <p class="item-detail"><%= i.name %></p>  <%
+            <p class="item-detail"><%= i.number %></p> <%
+            %><p class="item-detail"><%= i.name %></p>  <%
             %> <img class="item-detail" src=<%= i.image %> alt=<%= i.name %> /> <%
-            %> <p class="item-detail">Type: <%= i.type %></p>
+            %> <p class="item-detail">Descrição: <%= i.description %></p> <%
+            %> <p class="item-detail">Altura: <%= i.height %></p> <%
+            %> <p class="item-detail">Peso: <%= i.weight %></p> <%
+            %> <p class="item-detail">Categoria: <%= i.category %></p> <%
+            %> <p class="item-detail">Habilidades: <%= i.abilities %></p> <%
           </div> <%
         }) %>
       </div>

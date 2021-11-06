@@ -26,19 +26,18 @@ app.get("/cadastro", (req, res) => {
 });
 
 app.post("/sent", (req, res) => {
-  const { name, image, type } = req.body;
-  pokemon.push({ name, image, type })
+  const { number, name, type, image, description, height, weight, category, abilities } = req.body;
+  pokemon.push({ number, name, image, type, description, height, weight, category, abilities })
   message = "Dados enviados com sucesso!"
   res.redirect("/")
 })
 
 app.get("/detalhes/:id", (req, res) => {
   var id = req.params.id;
-  pokemon[id];
-  //const { number, name, image, type, description, height, weight, category, abilities }
+  const pokemonById = pokemon[id];
   res.render("detalhes",
   {
-    pokemons: pokemon
+    pokemons: pokemonById
   })
 })
 
