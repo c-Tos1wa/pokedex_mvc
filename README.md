@@ -1,3 +1,3 @@
 # pokedex_mvc
 
-<a href="https://pokeagenda.herokuapp.com/">Acesse</a>
+<a target=_blank href="https://pokeagenda.herokuapp.com/">Acesse a Pokedex</a>
