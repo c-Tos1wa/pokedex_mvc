@@ -29,8 +29,8 @@ Para usar `<Pokédex>`, siga estas etapas:
 
 ```
 No terminal, digite npm run dev e no navegador, digite localhost:3000.
-Ou se preferir, acesse diretamente: <a href="https://pokeagenda.herokuapp.com/" target=_blank >Pokedex</a>
 ```
+Ou se preferir, acesse diretamente: <a href="https://pokeagenda.herokuapp.com/" target=_blank >Pokedex</a>
 
 ## 🤝 Colaboradores
 
