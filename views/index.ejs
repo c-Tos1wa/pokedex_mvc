@@ -14,7 +14,7 @@
         <% pokemons.forEach ( (item, id) => {
           %><a class="eachCard" href="/detalhes/<%= id %>">
             <p class="card-item"><%= item.name %></p>  <%
-            %> <img class="card-item" src=<%= item.image %> alt=<%= item.name %> /> <%
+            %> <img class="card-item" src="<%= item.image %>" alt=<%= item.name %> /> <%
             %> <p class="card-item">Type: <%= item.type %></p>
           <%}) %>
       </a>

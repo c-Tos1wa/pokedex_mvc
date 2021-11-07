@@ -30,14 +30,14 @@ app.get("/cadastro", (req, res) => {
 });
 
 app.post("/sent", (req, res) => {
-  const { number, name, type, image, description, height, weight, category, abilities } = req.body;
-  pokemon.push({ number, name, image, type, description, height, weight, category, abilities })
+  const information = req.body;
+  pokemon.push(information)
   message = "Dados enviados com sucesso!"
   res.redirect("/")
 });
 
 app.get("/detalhes/:id", (req, res) => {
-  var id = req.params.id;
+  const id = req.params.id;
   const pokemonById = pokemon[id];
   res.render("detalhes", { pokemonById })
 })

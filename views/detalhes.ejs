@@ -1,23 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/style.css">
+  <title>Pokédex | Detalhes</title>
+</head>
 
 <body>
+  <header class="header">
+    <img src="./img/pokeball.png" alt="Imagem de uma pokebola" />
+    <img src="./img/pokedex_logo.png" alt="Logo da Pokedex" />
+    <img src="./img/pokeball.png" alt="Imagem de uma pokebola" />
+  </header>
+  <section>
+    <nav class="navbar">
+      <a href="/">Home</a>
+      <a href="/cadastro">Cadastro</a>
+    </nav>
+  </section>
   <main>
-    <%- include('header'); %>
-    <section class="section">
-      <div class="card">
+      <section class="section">
+        <div class="card">
           <div class="eachCard">
-            <img class="card-item" src=<%= pokemonById.image %> alt=<%= pokemonById.name %> />
-            <p class="card-item"><%= pokemonById.number %></p> 
-            <p class="card-item"><%= pokemonById.name %></p>  
-            <p class="card-item">Descrição: <%= pokemonById.description %></p> 
-            <p class="card-item">Altura: <%= pokemonById.height %></p> 
-            <p class="card-item">Peso: <%= pokemonById.weight %></p> 
-            <p class="card-item">Categoria: <%= pokemonById.category %></p> 
-            <p class="card-item">Habilidades: <%= pokemonById.abilities %></p> 
-          </div> 
-      </div>
-    </section>
+            <img class="card-item" src="<%= pokemonById.image %>" alt=<%=pokemonById.name %> />
+            <p class="card-item">
+              <%= pokemonById.number %>
+            </p>
+            <p class="card-item">
+              <%= pokemonById.name %>
+            </p>
+            <p class="card-item">Descrição: <%= pokemonById.description %>
+            </p>
+            <p class="card-item">Altura: <%= pokemonById.height %>
+            </p>
+            <p class="card-item">Peso: <%= pokemonById.weight %>
+            </p>
+            <p class="card-item">Categoria: <%= pokemonById.category %>
+            </p>
+            <p class="card-item">Habilidades: <%= pokemonById.abilities %>
+            </p>
+          </div>
+        </div>
+      </section>
   </main>
   <%- include('footer'); %>
-  <script src='js/script.js'></script>
+    <script src='js/script.js'></script>
 </body>
+
 </html>
