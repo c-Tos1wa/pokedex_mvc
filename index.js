@@ -11,7 +11,11 @@ app.use(express.urlencoded());
 let pokemon = [];
 let message = "";
 
-app.get("/", (req, res) => {  
+app.get("/", (req, res) => { 
+  
+  setTimeout(() => {
+    message = "";
+  }, 5000)
   res.render("index", 
     {
       pokemons: pokemon,
@@ -30,15 +34,12 @@ app.post("/sent", (req, res) => {
   pokemon.push({ number, name, image, type, description, height, weight, category, abilities })
   message = "Dados enviados com sucesso!"
   res.redirect("/")
-})
+});
 
 app.get("/detalhes/:id", (req, res) => {
   var id = req.params.id;
   const pokemonById = pokemon[id];
-  res.render("detalhes",
-  {
-    pokemons: pokemonById
-  })
+  res.render("detalhes", { pokemonById })
 })
 
 

@@ -4,18 +4,16 @@
     <%- include('header'); %>
     <section class="section">
       <div class="card">
-        <% pokemons.map ( i => { 
-          %><div class="cardDetail">
-            <p class="item-detail"><%= i.number %></p> <%
-            %><p class="item-detail"><%= i.name %></p>  <%
-            %> <img class="item-detail" src=<%= i.image %> alt=<%= i.name %> /> <%
-            %> <p class="item-detail">Descrição: <%= i.description %></p> <%
-            %> <p class="item-detail">Altura: <%= i.height %></p> <%
-            %> <p class="item-detail">Peso: <%= i.weight %></p> <%
-            %> <p class="item-detail">Categoria: <%= i.category %></p> <%
-            %> <p class="item-detail">Habilidades: <%= i.abilities %></p> <%
-          </div> <%
-        }) %>
+          <div class="eachCard">
+            <img class="card-item" src=<%= pokemonById.image %> alt=<%= pokemonById.name %> />
+            <p class="card-item"><%= pokemonById.number %></p> 
+            <p class="card-item"><%= pokemonById.name %></p>  
+            <p class="card-item">Descrição: <%= pokemonById.description %></p> 
+            <p class="card-item">Altura: <%= pokemonById.height %></p> 
+            <p class="card-item">Peso: <%= pokemonById.weight %></p> 
+            <p class="card-item">Categoria: <%= pokemonById.category %></p> 
+            <p class="card-item">Habilidades: <%= pokemonById.abilities %></p> 
+          </div> 
       </div>
     </section>
   </main>

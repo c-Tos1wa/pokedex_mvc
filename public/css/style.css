@@ -76,10 +76,16 @@ p#close:hover{
   padding: 1.5em 0 1em 0;
   height: 100%;
   width: auto;
+  cursor: pointer;
 }
+ /*
+.eachCard:hover{
+  transform: scale(1.1);
+} */
 
 .eachCard p{
   font-size: 1.5em;
+  color: #000;
 }
 
 .card-item{
@@ -123,7 +129,7 @@ p#close:hover{
 
 .footer{
   text-align: center;
-  font-size: 1rem;
+  font-size: 0.95em;
   margin: 5px;
 }
 
