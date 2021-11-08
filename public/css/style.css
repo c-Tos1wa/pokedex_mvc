@@ -16,6 +16,7 @@ h2{
 
 
 .header{
+  /*position: fixed; */
   background-color: #ff7d00;
   display: flex;
   justify-content: center;
@@ -23,6 +24,7 @@ h2{
 }
 
 .navbar{
+  /*position: fixed; */
   background-color: #001524;
   display: flex;
   justify-content: center;
@@ -41,8 +43,8 @@ section#msg{
   background-color: #32CD32;
   color: #000000;
   position: fixed;
-  left: 3rem;
-  right: 3rem;
+  left: 10rem;
+  right: 5rem;
   top: 12rem;
   text-align: center;
   font-size: 0.9rem;

@@ -1,26 +1,26 @@
 
 <body>
   <main>
-    <%- include('header'); %>
-      <section class="section">
+    <section class="section">
+        <%- include('header'); %>
         <div class="card">
           <div class="eachCard">
-            <img class="card-item" src="<%= pokemonById.image %>" alt=<%=pokemonById.name %> />
+            <img class="card-item" src=<%= pokemons.image %> alt=<%=pokemons.name %> />
             <p class="card-item">
-              <%= pokemonById.number %>
+              <%= pokemons.number %>
             </p>
             <p class="card-item">
-              <%= pokemonById.name %>
+              <%= pokemons.name %>
             </p>
-            <p class="card-item">Descrição: <%= pokemonById.description %>
+            <p class="card-item">Descrição: <%= pokemons.description %>
             </p>
-            <p class="card-item">Altura: <%= pokemonById.height %>
+            <p class="card-item">Altura: <%= pokemons.height %>
             </p>
-            <p class="card-item">Peso: <%= pokemonById.weight %>
+            <p class="card-item">Peso: <%= pokemons.weight %>
             </p>
-            <p class="card-item">Categoria: <%= pokemonById.category %>
+            <p class="card-item">Categoria: <%= pokemons.category %>
             </p>
-            <p class="card-item">Habilidades: <%= pokemonById.abilities %>
+            <p class="card-item">Habilidades: <%= pokemons.abilities %>
             </p>
           </div>
         </div>
